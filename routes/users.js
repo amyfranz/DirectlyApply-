@@ -8,8 +8,8 @@ const verify = require("./verifyToken");
 router.get("/", verify, async (req, res) => {
   try {
     const user = await User.findById(req.user);
-    const { name, email, date } = user;
-    res.json({ name, email, date });
+    const { name, email, phone, date, findUs, password } = user;
+    res.json({ user: { name, email, phone, date, findUs, password} });
   } catch (err) {
     res.json({ message: err });
   }

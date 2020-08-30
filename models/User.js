@@ -9,6 +9,16 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  phone: {
+    type: String,
+    required: true,
+    max: 15,
+    min: 8,
+  },
+  findUs: {
+    type: String,
+    required: true,
+  },
   password: {
     type: String,
     required: true,
