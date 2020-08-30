@@ -22,8 +22,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 //IMPORT ROUTES
-const authRoute = require("./routes/auth");
-const userRoute = require("./routes/users");
+const authRoute = require("../routes/auth");
+const userRoute = require("../routes/users");
 
 //Route Middleware
 app.use("/users", authRoute);
